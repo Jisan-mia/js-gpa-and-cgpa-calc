@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto+Mono:wght@400;500&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-color:#3D2C83;
+	font-family: 'Roboto Mono', sans-serif;
+	color: #DFDFEF;
+}
+
+.page-title{
+	margin-top: 8px;
+	text-align: center;
+	position: relative;
+	margin-bottom: 5px;
+	font-size: 26px;
+
+}
+.page-title:after{
+	content: "";
+	position: absolute;
+	left: 50%;
+	margin-left: -235px;
+	bottom: 0;
+	width: 470px;
+	border-bottom: 2px solid #DFDFEF;
+}
+
+
+
+.flex-box-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.flex-box-div{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+
+select{
+	width: 100%;
+	font-size: 15px;
+	outline: none;
+	margin-bottom: 10px;
+	background-image: linear-gradient(to right,  #1FA2FF  51%, #1FA2FF  100%);
+
+	background-color: #1FA2FF;
+	border-radius: 3px;
+	color: white;
+}
+select,select option{
+	padding: 5px;
+}
+
+.form-div{
+	width: 350px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+#gpa-form{
+	/*display: none;*/
+}
+form{
+	width: 100%;
+	
+	/*overflow: hidden;*/
+}
+form .form-group{
+	margin-bottom: 11px;
+}
+
+form .form-group label{
+	display: inline-block;
+	margin-bottom: 5px
+}
+
+form .form-group input{
+	width: 100%;
+	padding: 8px;
+	border-radius: 4px;
+	border: 3px solid gray;
+	outline: none;
+	font-size: 14px;
+}
+form .form-group input:focus{
+	border-color: #1FA2FF;
+	box-shadow: 0 0 4px 2px #1FA2FF;
+}
+
+.btn{
+	padding:  8px 40px;
+	border: none;
+	outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+    color: white;    
+    transition: 1s all ease;
+    margin-right: 10px;
+    transition: 0.5s ease all;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.calculate-btn{
+	background-image: linear-gradient(to right, #1FA2FF 25%, #12D8FA  51%, #1FA2FF  100%);
+}
+.calculate-btn:hover{
+	background-image: linear-gradient(to right,  #1FA2FF  51%, #1FA2FF  100%);
+}
+
+.reset-btn{
+	background-image: linear-gradient(to right, #D31027 0%, #EA384D  51%, #D31027  100%)
+}
+.reset-btn:hover{
+	background-image: linear-gradient(to right, #D31027 0%,  #D31027  100%)
+}
+
+
+.gpa-table{
+	margin-bottom: 16px;
+}
+table{
+	/*font-family: 'Poppins', sans-serif;*/
+	border-collapse: collapse;
+	width: 100%;
+}
+table caption{
+	font-size: 18px;
+}
+table tbody tr:hover,
+table thead tr:hover{
+	background-color: #4432C9;
+}
+table th{
+	font-weight: 500;
+	text-align: left;
+	padding: 8px 0;
+	background-color:#4432ED;
+	color: white;
+}
+table td,table th{
+	font-weight: 400;
+	padding: 2px 5px;
+}
+table td{
+	text-align: center;
+}
+table tr:nth-child(even){
+	background-color:  #4431AD;
+}
+
+
+.result-box{
+	border: 1px solid #DFDFEF;
+	width: 150px;
+	height: 100px;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 22px;
+	font-weight: bold;
+}
+
+
+/*cgpa*/
+#cgpa-form{
+	display: none;
+}
+#cgpa-form #cgpa-form-group{
+	margin-bottom: 4px !important;
+}
+#cgpa-form #cgpa-form-group input{
+	padding: 5px;
+}
+
+footer{
+}
+footer p {
+	text-align: center;
+	color: gray;
+	font-size: 14px;
+	margin: 7px 0;
+}
+footer p a{
+	text-decoration: none;
+	color: orange;
+
+}
+
+@media (max-width: 768px){
+	.page-title{
+		margin-top: 15px;
+	}
+	.flex-box-container{
+		flex-direction: column;
+	}
+	.result-box{
+		position: relative;
+		top: 15px;
+		bottom: 0;
+		width: 150px;
+		height: 50px;
+		font-size: 20px;
+		font-weight: 700;
+	}
+	.gpa-table{
+		margin-top:20px; 
+	}
+}
+
+@media (max-width: 425px){
+	.page-title{
+		font-size: 24px;
+		margin-bottom: 10px
+	}
+	.page-title:after{
+		left: 65%;
+		margin-left: -175x;
+		width: 350px;
+	}
+	.form-div{
+		width: 350px;
+	}
+
+	.btn{
+		padding:  5px 30px;
+	}
+	.gpa-table{
+		margin-top: 50px;
+		margin-bottom: 20px;
+	}
+	table{
+		font-family: 'Poppins', sans-serif;
+		width: 350px;
+	}
+	table caption{
+		font-size: 17px;
+	}
+	
+	table th{
+		font-weight: 400;
+		padding: 5px 0;
+		text-align: center;
+	}
+	table td,table th{
+		font-weight: 400;
+		padding: 2px 5px;
+		font-size: 14px;
+	}
+	.cgpa-table{
+		margin-bottom: 20px
+	}
+	.result-box{
+		position: relative;
+		top: 15px;
+		width: 150px;
+		height: 70px;
+		font-size: 20px;
+		font-weight: 700;
+	}
+}
+@media (max-width: 375px){
+	.page-title{
+		font-size: 22px;
+	}
+	.form-div{
+		width: 320px;
+	}
+	table{
+		width: 320px;
+	}
+
+	form .form-group{
+		margin-bottom: 6px;
+	}
+
+	form .form-group label{
+		margin-bottom: 2px
+	}
+	form .form-group input{
+		width: 95%;
+		padding: 5px;
+		border-radius: 3px;
+		border: 2px solid gray;
+		font-size: 13px;
+	}
+}
